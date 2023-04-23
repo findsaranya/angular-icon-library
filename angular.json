@@ -33,6 +33,106 @@
           }
         }
       }
+    },
+    "fashion": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/fashion",
+      "sourceRoot": "projects/fashion/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/fashion",
+            "index": "projects/fashion/src/index.html",
+            "main": "projects/fashion/src/main.ts",
+            "polyfills": "projects/fashion/src/polyfills.ts",
+            "tsConfig": "projects/fashion/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/fashion/src/favicon.ico",
+              "projects/fashion/src/assets"
+            ],
+            "styles": [
+              "projects/fashion/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/fashion/src/environments/environment.ts",
+                  "with": "projects/fashion/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "fashion:build:production"
+            },
+            "development": {
+              "browserTarget": "fashion:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "fashion:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/fashion/src/test.ts",
+            "polyfills": "projects/fashion/src/polyfills.ts",
+            "tsConfig": "projects/fashion/tsconfig.spec.json",
+            "karmaConfig": "projects/fashion/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/fashion/src/favicon.ico",
+              "projects/fashion/src/assets"
+            ],
+            "styles": [
+              "projects/fashion/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
   }
 }
