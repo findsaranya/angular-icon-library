@@ -1,0 +1,17 @@
+{
+  "srcFiles": [
+    "./projects/ng-tt-icons/icons/**/*.svg"
+  ],
+  "outputDirectory": "./projects/ng-tt-icons/src/lib",
+  "interfaceName": "TTIcon",
+  "typeName": "ttIcon",
+  "prefix": "ttIcon",
+  "svgoConfig": {
+    "plugins": [
+      "cleanupAttrs"
+    ]
+  },
+  "fileName": "tt-icon.model",
+  "additionalModelFile": "./projects/ng-tt-icons/src/lib",
+  "compileSources": true
+}

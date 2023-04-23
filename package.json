@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "generate-icons": "svg-to-ts -s projects/ng-tt-icons/icons -o projects/ng-tt-icons/src/lib -f tt-icons -p ttIcons -t ttIcon -i TTIcon"
+    "generate-icons": "npx -p svg-to-ts svg-to-ts-constants"
   },
   "private": true,
   "dependencies": {
