@@ -3,5 +3,36 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "ng-tt-icons": {
+      "projectType": "library",
+      "root": "projects/ng-tt-icons",
+      "sourceRoot": "projects/ng-tt-icons/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ng-tt-icons/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-tt-icons/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-tt-icons/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-tt-icons/src/test.ts",
+            "tsConfig": "projects/ng-tt-icons/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-tt-icons/karma.conf.js"
+          }
+        }
+      }
+    }
   }
 }
