@@ -11,10 +11,11 @@ import {
   ttIconIconTakeBackFacility,
   ttIconIconUploadImage
 } from 'projects/ng-tt-icons/src/lib/tt-icon.model';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, NgTtIconsModule],
+  imports: [BrowserModule, AppRoutingModule, NgTtIconsModule, NoopAnimationsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
