@@ -17,7 +17,7 @@ import { TTIconRegistry } from './ng-tt-icons.service';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NgTtIconsComponent implements OnInit {
+export class NgTtIconsComponent {
   private svgIcon?: SVGElement;
 
   @Input()
@@ -35,9 +35,9 @@ export class NgTtIconsComponent implements OnInit {
     private ttIconRegistry: TTIconRegistry,
     @Optional() @Inject(DOCUMENT) private document: any
   ) {}
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  // ngOnInit(): void {
+  //   throw new Error('Method not implemented.');
+  // }
 
   private svgElementFromString(svgContent: string): SVGElement {
     const div = this.document.createElement('DIV');
