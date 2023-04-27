@@ -1,0 +1,192 @@
+
+  $tt-icon-batches: "\ea01";
+
+  $tt-icon-completed_products: "\ea02";
+
+  $tt-icon-dashboard: "\ea03";
+
+  $tt-icon-dashboard_1: "\ea04";
+
+  $tt-icon-delivery: "\ea05";
+
+  $tt-icon-logout: "\ea06";
+
+  $tt-icon-manage_users: "\ea07";
+
+  $tt-icon-pin: "\ea08";
+
+  $tt-icon-process_and_garments: "\ea09";
+
+  $tt-icon-profile: "\ea0a";
+
+  $tt-icon-settings: "\ea0b";
+
+  $tt-icon-store: "\ea0c";
+
+  $tt-icon-store 2: "\ea0d";
+
+  $tt-icon-unpin: "\ea0e";
+
+
+@font-face {
+  font-display: block;
+  font-family: "tt-icon";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./tt-icon.eot?1673595270232");
+  src: url("./tt-icon.eot?#iefix") format("embedded-opentype"), url("./tt-icon.woff2?1673595270232") format("woff2"), url("./tt-icon.woff?1673595270232") format("woff"), url("./tt-icon.ttf?1673595270232") format("truetype"), url("./tt-icon.svg?1673595270232#tt-icon") format("svg");
+}
+
+%tt-icon {
+display: inline-block;
+  font-family: "tt-icon";
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tt-icon {
+  @extend %tt-icon;
+}
+
+.tt-icon-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -0.0667em;
+}
+
+.tt-icon-xs {
+  font-size: 0.75em;
+}
+
+.tt-icon-sm {
+  font-size: 0.875em;
+}
+
+.tt-icon-1x {
+  font-size: 1em;
+}
+
+.tt-icon-2x {
+  font-size: 2em;
+}
+
+.tt-icon-3x {
+  font-size: 3em;
+}
+
+.tt-icon-4x {
+  font-size: 4em;
+}
+
+.tt-icon-5x {
+  font-size: 5em;
+}
+
+.tt-icon-6x {
+  font-size: 6em;
+}
+
+.tt-icon-7x {
+  font-size: 7em;
+}
+
+.tt-icon-8x {
+  font-size: 8em;
+}
+
+.tt-icon-9x {
+  font-size: 9em;
+}
+
+.tt-icon-10x {
+  font-size: 10em;
+}
+
+.tt-icon-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.tt-icon-border {
+  border: solid 0.08em #eee;
+  border-radius: 0.1em;
+  padding: 0.2em 0.25em 0.15em;
+}
+
+.tt-icon-pull-left {
+  float: left;
+}
+
+.tt-icon-pull-right {
+  float: right;
+}
+
+.tt-icon.tt-icon-pull-left {
+  margin-right: 0.3em;
+}
+
+.tt-icon.tt-icon-pull-right {
+  margin-left: 0.3em;
+}
+
+
+.tt-icon.batches::before {
+    content: $tt-icon-batches;
+}
+
+.tt-icon.completed_products::before {
+    content: $tt-icon-completed_products;
+}
+
+.tt-icon.dashboard::before {
+    content: $tt-icon-dashboard;
+}
+
+.tt-icon.dashboard_1::before {
+    content: $tt-icon-dashboard_1;
+}
+
+.tt-icon.delivery::before {
+    content: $tt-icon-delivery;
+}
+
+.tt-icon.logout::before {
+    content: $tt-icon-logout;
+}
+
+.tt-icon.manage_users::before {
+    content: $tt-icon-manage_users;
+}
+
+.tt-icon.pin::before {
+    content: $tt-icon-pin;
+}
+
+.tt-icon.process_and_garments::before {
+    content: $tt-icon-process_and_garments;
+}
+
+.tt-icon.profile::before {
+    content: $tt-icon-profile;
+}
+
+.tt-icon.settings::before {
+    content: $tt-icon-settings;
+}
+
+.tt-icon.store::before {
+    content: $tt-icon-store;
+}
+
+.tt-icon.store 2::before {
+    content: $tt-icon-store 2;
+}
+
+.tt-icon.unpin::before {
+    content: $tt-icon-unpin;
+}

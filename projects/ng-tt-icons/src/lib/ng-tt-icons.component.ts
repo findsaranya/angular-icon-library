@@ -3,6 +3,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   ElementRef,
+  HostBinding,
   Inject,
   Input,
   OnInit,
@@ -15,10 +16,27 @@ import { TTIconRegistry } from './ng-tt-icons.service';
   template: `
     <ng-content></ng-content>
   `,
+  styles: [
+    `
+      .tt-icon[fontIcon]:before {
+        content: attr(fontIcon);
+      }
+    `
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NgTtIconsComponent {
   private svgIcon?: SVGElement;
+
+  @Input()
+  set fontIcon(icon: string) {
+    this._fontIcon = icon;
+  }
+
+  get fontIcon(): string {
+    return this._fontIcon;
+  }
+  private _fontIcon = '';
 
   @Input()
   set name(iconName: string) {
@@ -28,6 +46,14 @@ export class NgTtIconsComponent {
     const svgData = this.ttIconRegistry.getIcon(iconName);
     this.svgIcon = this.svgElementFromString(<string>svgData);
     this.element.nativeElement.appendChild(this.svgIcon);
+  }
+
+  @HostBinding('class') get class() {
+    return ['tt-icon', this.fontIcon ? this._fontIcon : null].join(' ');
+  }
+
+  @HostBinding('attr.fontIcon') get hasFontIcon() {
+    return this.fontIcon ? this.fontIcon : null;
   }
 
   constructor(

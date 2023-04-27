@@ -1,0 +1,158 @@
+@font-face {
+  font-display: auto;
+  font-family: "tt-icon";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./tt-icon.eot?1673595270803");
+  src: url("./tt-icon.eot?#iefix") format("embedded-opentype"), url("./tt-icon.woff2?1673595270803") format("woff2"), url("./tt-icon.woff?1673595270803") format("woff"), url("./tt-icon.ttf?1673595270803") format("truetype"), url("./tt-icon.svg?1673595270803#tt-icon") format("svg");
+}
+
+.tt-icon {
+  display: inline-block;
+  font-family: "tt-icon";
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tt-icon-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -0.0667em;
+}
+
+.tt-icon-xs {
+  font-size: 0.75em;
+}
+
+.tt-icon-sm {
+  font-size: 0.875em;
+}
+
+.tt-icon-1x {
+  font-size: 1em;
+}
+
+.tt-icon-2x {
+  font-size: 2em;
+}
+
+.tt-icon-3x {
+  font-size: 3em;
+}
+
+.tt-icon-4x {
+  font-size: 4em;
+}
+
+.tt-icon-5x {
+  font-size: 5em;
+}
+
+.tt-icon-6x {
+  font-size: 6em;
+}
+
+.tt-icon-7x {
+  font-size: 7em;
+}
+
+.tt-icon-8x {
+  font-size: 8em;
+}
+
+.tt-icon-9x {
+  font-size: 9em;
+}
+
+.tt-icon-10x {
+  font-size: 10em;
+}
+
+.tt-icon-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.tt-icon-border {
+  border: solid 0.08em #eee;
+  border-radius: 0.1em;
+  padding: 0.2em 0.25em 0.15em;
+}
+
+.tt-icon-pull-left {
+  float: left;
+}
+
+.tt-icon-pull-right {
+  float: right;
+}
+
+.tt-icon.tt-icon-pull-left {
+  margin-right: 0.3em;
+}
+
+.tt-icon.tt-icon-pull-right {
+  margin-left: 0.3em;
+}
+
+
+.tt-icon.batches::before {
+  content: "\ea01";
+}
+
+.tt-icon.completed_products::before {
+  content: "\ea02";
+}
+
+.tt-icon.dashboard::before {
+  content: "\ea03";
+}
+
+.tt-icon.dashboard_1::before {
+  content: "\ea04";
+}
+
+.tt-icon.delivery::before {
+  content: "\ea05";
+}
+
+.tt-icon.logout::before {
+  content: "\ea06";
+}
+
+.tt-icon.manage_users::before {
+  content: "\ea07";
+}
+
+.tt-icon.pin::before {
+  content: "\ea08";
+}
+
+.tt-icon.process_and_garments::before {
+  content: "\ea09";
+}
+
+.tt-icon.profile::before {
+  content: "\ea0a";
+}
+
+.tt-icon.settings::before {
+  content: "\ea0b";
+}
+
+.tt-icon.store::before {
+  content: "\ea0c";
+}
+
+.tt-icon.store 2::before {
+  content: "\ea0d";
+}
+
+.tt-icon.unpin::before {
+  content: "\ea0e";
+}
