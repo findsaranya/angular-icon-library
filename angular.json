@@ -3,5 +3,105 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "jest-angular-app": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/jest-angular-app",
+      "sourceRoot": "projects/jest-angular-app/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/jest-angular-app",
+            "index": "projects/jest-angular-app/src/index.html",
+            "main": "projects/jest-angular-app/src/main.ts",
+            "polyfills": "projects/jest-angular-app/src/polyfills.ts",
+            "tsConfig": "projects/jest-angular-app/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/jest-angular-app/src/favicon.ico",
+              "projects/jest-angular-app/src/assets"
+            ],
+            "styles": [
+              "projects/jest-angular-app/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/jest-angular-app/src/environments/environment.ts",
+                  "with": "projects/jest-angular-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "jest-angular-app:build:production"
+            },
+            "development": {
+              "browserTarget": "jest-angular-app:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "jest-angular-app:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/jest-angular-app/src/test.ts",
+            "polyfills": "projects/jest-angular-app/src/polyfills.ts",
+            "tsConfig": "projects/jest-angular-app/tsconfig.spec.json",
+            "karmaConfig": "projects/jest-angular-app/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/jest-angular-app/src/favicon.ico",
+              "projects/jest-angular-app/src/assets"
+            ],
+            "styles": [
+              "projects/jest-angular-app/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
   }
 }
